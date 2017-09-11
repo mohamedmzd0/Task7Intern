@@ -1,0 +1,83 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mohamedabdelaziz.task7.Fragment.SearchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/doctor"
+                android:layout_width="@dimen/doctor_user_w_h"
+                android:layout_height="@dimen/doctor_user_w_h"
+                android:scaleType="fitXY"
+                android:background="@drawable/btn_dr_select" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/user"
+                android:scaleType="fitXY"
+                android:layout_width="@dimen/doctor_user_w_h"
+                android:layout_height="@dimen/doctor_user_w_h"
+                android:background="@drawable/btn_member" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="15dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:id="@+id/textv"
+                android:background="@drawable/search_edittext"
+                android:hint="Search users by name , email"
+                android:paddingLeft="10dp"
+                android:paddingRight="40dp"
+                android:textColor="#005"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="end"
+                android:layout_margin="7dp"
+                android:id="@+id/cleartext"
+                android:src="@drawable/ic_delete_search" />
+        </FrameLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'key'
+            keyPassword 'keymohamed'
+            storeFile file("$rootDir/keyst.jks")
+            storePassword 'keymohamed'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.example.mohamedabdelaziz.task7"
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        release {
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+}

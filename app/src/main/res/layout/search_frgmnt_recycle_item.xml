@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="#55EBEBEB"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/addfriend"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/btn_addfriend" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circlerImage"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_below="@+id/addfriend"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circlerimage_border"
+            android:padding="1dp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/circlerImage"
+            android:textAlignment="center"
+            android:textColor="#009589"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/address"
+            android:textAlignment="center"
+            android:textColor="#FBB040" />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/status"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</FrameLayout>

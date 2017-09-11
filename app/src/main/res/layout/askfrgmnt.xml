@@ -1,0 +1,81 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mohamedabdelaziz.task7.Fragment.SearchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/selected_text_numb"
+                android:paddingTop="7dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="35sp" />
+
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/nonselected_text_numb" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/nonselected_text_numb"
+                android:paddingTop="7dp"
+                android:text="2"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="35sp" />
+
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/nonselected_text_numb" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/nonselected_text_numb"
+                android:paddingTop="7dp"
+                android:text="3"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="35sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Choose one specialty"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_ask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:padding="5dp" />
+    </LinearLayout>
+</ScrollView>
